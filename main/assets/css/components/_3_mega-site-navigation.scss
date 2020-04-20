@@ -202,10 +202,9 @@ Usage: codyhouse.co/license
 // --mobile - style affecting only small screens 👇
 
 // --------------------------------
+
 .mega-nav--mobile {
-  background-color: #fafafa;
-}
-.mega-nav--mobile {
+  box-shadow: inset 0px -1px 0px alpha(var(--color-contrast-medium), 0.1); // border bottom
   .mega-nav__icon-btns--desktop {
     display: none; // hide --desktop icon buttons
   }
@@ -348,7 +347,7 @@ Usage: codyhouse.co/license
 // --------------------------------
 
 .mega-nav--desktop {
-  box-shadow: inset 0px -1px 0px alpha(var(--color-contrast-higher), 0.1); // border bottom
+  box-shadow: inset 0px -1px 0px alpha(var(--color-contrast-medium), 0.1); // border bottom
 
   .mega-nav__icon-btns--mobile, .mega-nav__sub-nav-wrapper, .mega-nav__search, .mega-nav__label {
     display: none;
