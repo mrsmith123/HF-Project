@@ -40,7 +40,6 @@ $flexbin-space-phone: $flexbin-space !default;
             max-width: 100%;
             min-width: 100%;
             vertical-align: bottom;
-            border-radius: var(--radius-md) var(--radius-md);
         }
     }
 
@@ -48,7 +47,7 @@ $flexbin-space-phone: $flexbin-space !default;
     // Add margin around flexbin gallery
     // Visual margin is the same with space between rows
     &.flexbin-margin {
-        margin: $space / 2;
+        margin: $space / 4;
     }
 }
 
@@ -56,6 +55,8 @@ $flexbin-space-phone: $flexbin-space !default;
 .flexbin {
     // Desktop devices
     @include flexbin($flexbin-row-height, $flexbin-space);
+    padding: 0px;
+    }
 
     // Tablet devices
     @media (max-width: $flexbin-tablet-max) {
@@ -70,7 +71,6 @@ $flexbin-space-phone: $flexbin-space !default;
 
 .container-justified-gal {
     max-width: var(--max-width-lg);
-    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
 }
