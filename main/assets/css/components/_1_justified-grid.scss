@@ -65,7 +65,6 @@ $flexbin-space-phone: $flexbin-space !default;
     @media (max-width: $flexbin-phone-max) {
         @include flexbin($flexbin-row-height-phone, $flexbin-space-phone);
     }
-}
 
 .container-justified-gal {
     max-width: var(--max-width-lg);
