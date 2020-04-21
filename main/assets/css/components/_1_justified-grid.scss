@@ -1,6 +1,6 @@
 // Default variables that can be overrided
 $flexbin-row-height: 300px !default;
-$flexbin-space: 25px !default;
+$flexbin-space: 20px !default;
 
 $flexbin-tablet-max: 980px !default;
 $flexbin-row-height-tablet: 150px !default;
@@ -16,7 +16,7 @@ $flexbin-space-phone: $flexbin-space !default;
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
-    margin: - $space / 4;
+    margin: - $space / 2;
 
     // Let final row align left fit if images are not enough to fill
     // If the gap is very small, fill the final row
@@ -43,10 +43,11 @@ $flexbin-space-phone: $flexbin-space !default;
         }
     }
 
+
     // Add margin around flexbin gallery
     // Visual margin is the same with space between rows
     &.flexbin-margin {
-        margin: $space / 4;
+        margin: $space / 2;
     }
 }
 
@@ -54,7 +55,6 @@ $flexbin-space-phone: $flexbin-space !default;
 .flexbin {
     // Desktop devices
     @include flexbin($flexbin-row-height, $flexbin-space);
-    }
 
     // Tablet devices
     @media (max-width: $flexbin-tablet-max) {
@@ -65,6 +65,7 @@ $flexbin-space-phone: $flexbin-space !default;
     @media (max-width: $flexbin-phone-max) {
         @include flexbin($flexbin-row-height-phone, $flexbin-space-phone);
     }
+}
 
 .container-justified-gal {
     max-width: var(--max-width-lg);
