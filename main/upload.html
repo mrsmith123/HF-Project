@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <script>
     if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
@@ -17,7 +16,9 @@
   </noscript>
   <title>Title</title>
 </head><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-<header class="mega-nav mega-nav--mobile mega-nav--desktop@md position-relative js-mega-nav hide-nav js-hide-nav js-hide-nav--main">
+
+<body>
+  <header class="mega-nav mega-nav--mobile mega-nav--desktop@md position-relative js-mega-nav">
     <div class="mega-nav__container">
       <!-- 👇 logo -->
       <a href="#0" class="mega-nav__logo">
@@ -128,7 +129,7 @@
               <a href="mangas.html" class="mega-nav__control">Mangas</a>
             </li>
             <li class="mega-nav__item">
-              <a href="movies.html" class="mega-nav__control">Movies</a>
+              <a href="#0" class="mega-nav__control">Movies</a>
             </li>
             <li class="mega-nav__item">
               <a href="#0" class="mega-nav__control">Comix</a>
@@ -138,6 +139,9 @@
             </li>
             <li class="mega-nav__item">
               <a href="#0" class="mega-nav__control">Games</a>
+            </li>
+            <li class="mega-nav__item">
+              <a href="#0" class="mega-nav__control">Contact Us</a>
             </li>
           </ul>
   
@@ -180,7 +184,7 @@
   
             <!-- 👇 button -->
             <li class="mega-nav__item">
-              <a href="register.html" class="btn btn--primary mega-nav__btn">Register</a>
+              <a href="#0" class="btn btn--primary mega-nav__btn">Register</a>
             </li>
           </ul>
         </div>
@@ -204,102 +208,76 @@
       </div>
     </div>
   </header>
-<body>
 
-	<form class="cd-form floating-labels">
-		<fieldset>
-			<legend>Account Info</legend>
-
-			<div class="error-message">
-				<p>Please enter a valid email address</p>
-			</div>
-
-			<div class="icon">
-				<label class="cd-label" for="cd-name">Name</label>
-				<input class="user" type="text" name="cd-name" id="cd-name" required>
-		    </div> 
-
-		    <div class="icon">
-		    	<label class="cd-label" for="cd-company">Company</label>
-				<input class="company" type="text" name="cd-company" id="cd-company">
-		    </div> 
-
-		    <div class="icon">
-		    	<label class="cd-label" for="cd-email">Email</label>
-				<input class="email error" type="email" name="cd-email" id="cd-email" required>
-		    </div>
-		</fieldset>
-
-		<fieldset>
-			<legend>Project Info</legend>
-
-			<div>
-				<h4>Budget</h4>
-
-				<p class="cd-select icon">
-					<select class="budget">
-						<option value="0">Select Budget</option>
-						<option value="1">&lt; $5000</option>
-						<option value="2">$5000 - $10000</option>
-						<option value="3">&gt; $10000</option>
-					</select>
-				</p>
-			</div> 
-
-			<div>
-				<h4>Project type</h4>
-
-				<ul class="cd-form-list">
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-1" checked>
-						<label for="cd-radio-1">Choice 1</label>
-					</li>
-						
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-2">
-						<label for="cd-radio-2">Choice 2</label>
-					</li>
-
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-3">
-						<label for="cd-radio-3">Choice 3</label>
-					</li>
-				</ul>
-			</div>
-
-			<div>
-				<h4>Features</h4>
-
-				<ul class="cd-form-list">
-					<li>
-						<input type="checkbox" id="cd-checkbox-1">
-						<label for="cd-checkbox-1">Option 1</label>
-					</li>
-
-					<li>
-						<input type="checkbox" id="cd-checkbox-2">
-						<label for="cd-checkbox-2">Option 2</label>
-					</li>
-
-					<li>
-						<input type="checkbox" id="cd-checkbox-3">
-						<label for="cd-checkbox-3">Option 3</label>
-					</li>
-				</ul>
-			</div>
-
-			<div class="icon">
-				<label class="cd-label" for="cd-textarea">Project description</label>
-      			<textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
-			</div>
-
-			<div>
-		      	<input type="submit" value="Send Message">
-		    </div>
-		</fieldset>
-  </form>
-  
-</body>
-</footer>
 <script src="assets/js/scripts.js"></script>
+</body>
+<div class="container max-width-adaptive-lg margin-top-md">
+  <form>
+    <fieldset class="margin-bottom-md">
+      <legend class="form-legend">Upload Content</legend>
+  
+      <div class="margin-bottom-md">
+        <div class="grid gap-sm">
+          <div class="col-6@md">
+            <label class="form-label margin-bottom-xxs" for="inputName">Name</label>
+            <input class="form-control width-100%" type="text" name="inputName" id="inputName" required>
+          </div>
+      
+          <div class="col-6@md">
+            <label class="form-label margin-bottom-xxs" for="inputEmail">Email</label>
+            <input class="form-control width-100%" type="email" name="inputEmail" id="inputEmail" placeholder="email@myemail.com">
+          </div>
+        </div>
+      </div>
+  
+      <div class="margin-bottom-sm">
+        <label class="form-label margin-bottom-xxs" for="inputInvalid">Invalid</label>
+        <input class="form-control width-100%" type="text" name="inputInvalid" id="inputInvalid" aria-invalid="true" value="invalid data">
+        <div role="alert" class="form-error-msg form-error-msg--is-visible"><p><strong>Error:</strong> this is an error message</p></div>
+      </div>
+  
+      <div>
+        <label class="form-label margin-bottom-xxs" for="textarea">Textarea</label>
+        <textarea class="form-control width-100%" name="textarea" id="textarea"></textarea>
+        <p class="text-xs color-contrast-medium margin-top-xxs">Use helper text to provide additional information.</p>
+      </div>
+    </fieldset>
+  
+    <fieldset class="margin-bottom-md">
+      <legend class="form-legend">Radio Buttons</legend>
+  
+      <ul class="radio-list flex flex-column gap-xxxs">
+        <li>
+          <input class="radio" type="radio" name="radioButton" id="radio1" checked>
+          <label for="radio1">Choice 1</label>
+        </li>
+  
+        <li>
+          <input class="radio" type="radio" name="radioButton" id="radio2">
+          <label for="radio2">Choice 2</label>
+        </li>
+      </ul>
+    </fieldset>
+  
+    <fieldset class="margin-bottom-md">
+      <legend class="form-legend">Checkboxes</legend>
+  
+      <div class="checkbox-list flex flex-wrap gap-md">
+        <div>
+          <input class="checkbox" type="checkbox" id="checkbox1">
+          <label for="checkbox1">Option 1</label>
+        </div>
+  
+        <div>
+          <input class="checkbox" type="checkbox" id="checkbox2">
+          <label for="checkbox2">Option 2</label>
+        </div>
+      </div>
+    </fieldset>
+  
+    <div>
+      <button class="btn btn--primary">Submit</button>
+    </div>
+  </form>
+</div>
 </html>
